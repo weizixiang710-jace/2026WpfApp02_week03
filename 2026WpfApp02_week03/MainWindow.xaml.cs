@@ -19,6 +19,8 @@ namespace _2026WpfApp02_week03
         public MainWindow()
         {
             InitializeComponent();
+
         }
+
     }
 }

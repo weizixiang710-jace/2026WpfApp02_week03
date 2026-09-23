@@ -7,6 +7,65 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="650"/>
+            <RowDefinition Height="200"/>
+        </Grid.RowDefinitions>
 
+        <StackPanel Background="#FFE6D7AE">
+            <StackPanel Height="257" Width="517" HorizontalAlignment="Left">
+
+                <StackPanel.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFDAD9C7" Offset="0.004"/>
+                        <GradientStop Color="#FFE0DD94" Offset="1"/>
+                    </LinearGradientBrush>
+                </StackPanel.Background>
+
+                <!-- 伯爵紅茶 大杯 -->
+                <Border Background="White" BorderBrush="Gray" BorderThickness="1" CornerRadius="5" Padding="5" Margin="0,3">
+                    <StackPanel x:Name="type01" Orientation="Horizontal">
+                        <Label Content="伯爵紅茶 大杯 ($100) : " Width="200" VerticalAlignment="Center"/>
+                        <TextBox x:Name="bigBlackTea" Width="60" Height="25" VerticalContentAlignment="Center"/>
+                        <Label Content="杯" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- 伯爵紅茶 小杯 -->
+                <Border x:Name="type02" Background="White" BorderBrush="Gray" BorderThickness="1" CornerRadius="5" Padding="5" Margin="0,3">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="伯爵紅茶 小杯 ($80) : " Width="200" VerticalAlignment="Center"/>
+                        <TextBox x:Name="smallBlackTea" Width="60" Height="25" VerticalContentAlignment="Center"/>
+                        <Label Content="杯" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- 午後奶茶 大杯 -->
+                <Border x:Name="type03" Background="White" BorderBrush="Gray" BorderThickness="1" CornerRadius="5" Padding="5" Margin="0,3">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="午後奶茶 大杯 ($120) : " Width="200" VerticalAlignment="Center"/>
+                        <TextBox x:Name="bigmalkTea" Width="60" Height="25" VerticalContentAlignment="Center"/>
+                        <Label Content="杯" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- 午後奶茶 小杯 -->
+                <Border x:Name="type04" Background="White" BorderBrush="Gray" BorderThickness="1" CornerRadius="5" Padding="5" Margin="0,3">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="午後奶茶 小杯 ($80) : " Width="200" VerticalAlignment="Center"/>
+                        <TextBox x:Name="SmallmalkTea" Width="60" Height="25" VerticalContentAlignment="Center"/>
+                        <Label Content="杯" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+
+                <Label Content="本店不附吸管"/>
+            </StackPanel>
+
+        </StackPanel>
+
+        <Canvas>
+            <Button Content="BUY NOW" Width="150" Height="80" Canvas.Left="565" Canvas.Top="141" Background="#FFDEDCA2"/>
+            <TextBlock x:Name="txtReceipt" Text="購物明細將顯示於此..." FontSize="14" Canvas.Left="80" Canvas.Top="282" Height="115" Width="650" Background="#FFE0C98A"/>
+        </Canvas>
     </Grid>
 </Window>
